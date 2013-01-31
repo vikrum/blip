@@ -1,0 +1,102 @@
+2001-10-13 04:35  vikrum
+
+	* blip.c, common.c, common.h, dns-build.c, dns-build.h, pseudo.h,
+	udp-io.c, udp-io.h: UDP checksumming was acting up; fixed Some more
+	code cleanups Finalized for RELEASE
+
+2001-10-11 20:51  vikrum
+
+	* blip.c, dns-build.c, dns-build.h, dns.h, udp-io.c, udp-io.h,
+	udp.h: Checksumming complete and preparation for wrapping this
+	release up More cleanup of cmd line options
+
+2001-10-11 11:15  vikrum
+
+	* udp-io.c: Beginnings of UDP checksumming
+
+2001-10-11 08:20  vikrum
+
+	* blip.c, dns-build.c: Added better command line parsing of options
+
+2001-10-09 22:51  vikrum
+
+	* blip.c, dns-build.c, dns-build.h: Few more experiments with label
+	compression Added more options for randomess (source port, etc)
+
+2001-10-09 16:54  vikrum
+
+	* BENCHMARK, blip.c, dns-build.c, dns-build.h, udp-io.c: Adding
+	'funny' packet support aka header decompression antics
+
+2001-10-08 17:35  vikrum
+
+	* BENCHMARK, blip.c, common.c, dns-build.c: Added emprical
+	benchmarking results Further shift towards mtrand More logic clean
+	up by removing excess conditional statements
+
+2001-10-08 13:39  vikrum
+
+	* Makefile, blip.c, common.c, common.h, dns-build.c, dns-build.h,
+	dns.h, ip.h, mt19937int.c, mt19937int.h, udp-io.h, udp.h: Added
+	merseane twister random number generator Also added rnd_fil() from
+	ping.c More logic cleanup and optimization in main loop
+
+2001-10-08 03:47  vikrum
+
+	* README: Updated the readme
+
+2001-10-08 02:19  vikrum
+
+	* blip.c, common.h, dns-build.c, dns-build.h: + 32 bit random
+	number/ip macro + set_dns_type,class to change packet internals
+	later on + random class & type + logic fixes while sleeping on a
+	'0' + removed error checking for type & class; any thing will work
+	(typecast'd of course..) + cleaned up logic to remove expensive
+	conditional tests and replaced with flags + display type and class
+	being sent in debug mode
+
+2001-10-07 21:55  vikrum
+
+	* CHANGELOG: Updated changelog
+
+2001-10-03 17:45  vikrum
+
+	* README: Added README to blip module
+
+2001-10-03 17:45  vikrum
+
+	* CHANGELOG: Added CVS tag to changelog
+
+2001-10-03 17:41  vikrum
+
+	* CHANGELOG, ChangeLog: Renamed ChangeLog to CHANGELOG
+
+2001-10-03 17:39  vikrum
+
+	* ChangeLog: Adding ChangeLog
+
+2001-10-03 17:38  vikrum
+
+	* blip.c, common.c: Removed double alloc's for several vars
+
+2001-09-24 20:14  vikrum
+
+	* blip.c: Added signal handling, debugging information, and global
+	loop variable.
+
+2001-09-24 18:02  vikrum
+
+	* Makefile, blip.c, common.c, common.h, dns-build.c, dns-build.h,
+	dns.h, ip.h, udp-io.c, udp-io.h, udp.h: Checked in new revision
+	with proper iteration and sleeping.  Added cvs tags.
+
+2001-09-24 17:53  vikrum
+
+	* Makefile, blip.c, common.c, common.h, dns-build.c, dns-build.h,
+	dns.h, ip.h, udp-io.c, udp-io.h, udp.h: Initial revision
+
+2001-09-24 17:53  vikrum
+
+	* Makefile, blip.c, common.c, common.h, dns-build.c, dns-build.h,
+	dns.h, ip.h, udp-io.c, udp-io.h, udp.h: Initial check in.
+

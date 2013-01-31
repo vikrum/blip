@@ -1,0 +1,55 @@
+[root@cow /root]# /usr/bin/time ./blip-old -t 0 -c 0 0 pavilion "*" 500000 0
+10.94user 18.38system 0:29.32elapsed 100%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (146major+500017minor)pagefaults 0swaps
+
+root@spaghetti-force-5 [/home/vnijjar/src/c/blip]# /usr/bin/time ./blip -t 0 -c 0 0 0 "x" 2500000 0
+11.22user 87.02system 1:41.12elapsed 97%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (93major+11minor)pagefaults 0swaps
+
+mesaenane twister:
+root@spaghetti-force-5 [/home/vnijjar/src/c/blip]# /usr/bin/time ./blip -t 0 -c 0 0 0 "x" 2500000 0
+8.49user 87.93system 1:37.14elapsed 99%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (93major+11minor)pagefaults 0swaps
+
+rand:
+root@spaghetti-force-5 [/home/vnijjar/src/c/blip]# /usr/bin/time ./blip -t 0 -c 0 0 0 "x" 2500000 0
+13.57user 85.86system 1:40.66elapsed 98%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (93major+11minor)pagefaults 0swaps
+
+mt + more opt:
+root@spaghetti-force-5 [/home/vnijjar/src/c/blip]# /usr/bin/time ./blip -t 0 -c 0 0 0 "x" 2500000 0
+10.29user 80.24system 1:33.99elapsed 96%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (93major+11minor)pagefaults 0swaps
+
+[root@cosmo blip]# /usr/bin/time ./blip -t 0 -c 0 0 0 "x" 2500000 0
+10.94user 89.56system 1:43.32elapsed 97%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (106major+11minor)pagefaults 0swaps
+
+[root@cow /root]# /usr/bin/time ./blip -t 0 -c 0 0 0 "x" 2500000 0
+3.24user 34.13system 0:40.66elapsed 91%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (108major+11minor)pagefaults 0swaps
+
+[root@cow /root]# /usr/bin/time -v ./blip -t 0 -c 0 0 0 "x" 2500000 0
+        Command being timed: "./blip -t 0 -c 0 0 0 x 2500000 0"
+        User time (seconds): 3.96
+        System time (seconds): 36.60
+        Percent of CPU this job got: 99%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:40.60
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 0
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 108
+        Minor (reclaiming a frame) page faults: 11
+        Voluntary context switches: 0
+        Involuntary context switches: 0
+        Swaps: 0
+        File system inputs: 0
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0
