@@ -31,19 +31,20 @@ Usage
 
 Note: Since blip can be used to forge components of the IP and UDP headers, root is required to execute the binary.
 
-# Send query to 1.2.3.4, 2.2.2.2, and 5.6.7.8 ten times for www.yahoo.com
-# IN A every 3600s
-bash# ./blip -n 10 -l 3600 -h www.yahoo.com 1.2.3.4,2.2.2.2,5.6.7.8 
+  # Send query to 1.2.3.4, 2.2.2.2, and 5.6.7.8 ten times for www.yahoo.com
+  # IN A every 3600s
+  bash# ./blip -n 10 -l 3600 -h www.yahoo.com 1.2.3.4,2.2.2.2,5.6.7.8 
+  
+  # Send one zlip packet type 1 to 6.6.6.6 with a spoofed source of 6.6.6.6
+  bash# ./blip -s 6.6.6.6 -z 1 6.6.6.6
+  
+  # Flood 1.2.3.4 with random DNS packets from random sources
+  bash# ./blip -s 0 -R 1.2.3.4
+  
+  # Send a random query type to 1.2.3.4 every second until interrupt
+  bash# ./blip -t 0 -n 0 1.2.3.4
 
-# Send one zlip packet type 1 to 6.6.6.6 with a spoofed source of 6.6.6.6
-bash# ./blip -s 6.6.6.6 -z 1 6.6.6.6
-
-# Flood 1.2.3.4 with random DNS packets from random sources
-bash# ./blip -s 0 -R 1.2.3.4
-
-# Send a random query type to 1.2.3.4 every second until interrupt
-bash# ./blip -t 0 -n 0 1.2.3.4
-Further command line arguments and features can be found by running './blip -?'
+ Further command line arguments and features can be found by running './blip -?'
 
 Considerations
 
